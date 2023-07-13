@@ -6,36 +6,78 @@ describe ("test max", () => {
         expect(() => {
             max([])
         }).toThrow();
-        expect
+
+        expect(() => {
+            max([]);
+        }).toThrowError("numbers was empty")
     })
+
     test("arr w/ single element should return that element", () => {
-        console.log()
+        expect(max[1]).toEqual(1)
     })
-    test("return max in arr", () => {
-        console.log()
+
+    test("should return max in arr", () => {
+        const tests: [number[], number][] = [
+            [[1, 2, 3], 3]
+        ]
+
+    tests.forEach((test) => {
+        const [input, expected] = test;
+        expect(max(input)).toEqual(expected);
+    })
     })
 })
 
 describe ("test min", () => {
     test("empty arr should throw err", () => {
-        console.log()
+        expect(() => {
+            min([])
+        }).toThrow();
+
+        expect(() => {
+            min([]);
+        }).toThrowError("numbers was empty")
     })
+
     test("arr w/ single element should return that element", () => {
-        console.log()
+        expect(min[1]).toEqual(1)
     })
-    test("return min in arr", () => {
-        console.log()
+
+    test("should return min in arr", () => {
+        const tests: [number[], number][] = [
+            [[1, 2, 3], 1]
+        ]
+
+    tests.forEach((test) => {
+        const [input, expected] = test;
+        expect(max(input)).toEqual(expected);
+    })
     })
 })
 
 describe ("test avg", () => {
     test("empty arr should throw err", () => {
-        console.log()
+        expect(() => {
+            avg([])
+        }).toThrow();
+
+        expect(() => {
+            avg([]);
+        }).toThrowError("numbers was empty")
     })
+
     test("arr w/ single element should return that element", () => {
-        console.log()
+        expect(avg[1]).toEqual(1)
     })
-    test("return avg in arr", () => {
-        console.log()
+
+    test("should return avg in arr", () => {
+        const tests: [number[], number][] = [
+            [[1, 2, 3], 2]
+        ]
+
+    tests.forEach((test) => {
+        const [input, expected] = test;
+        expect(avg(input)).toEqual(expected);
+    })
     })
 })
